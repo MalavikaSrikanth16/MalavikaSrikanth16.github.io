@@ -16,7 +16,27 @@ File: Layout CSS
 
 html{overflow-y:scroll;}
 body{margin:0; padding:0; font-size:12px; font-family:verdana, Arial, Helvetica, sans-serif; color:#333333; background-color:#FFFFFF;}
-
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(2,172,238,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(2,172,238,0.4); 
+}
 .justify{text-align:justify;}
 .bold{font-weight:bold;}
 .center{text-align:center;}
@@ -76,26 +96,27 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #homecontent{padding:30px 0; line-height:1.3em;}
 #homecontent img{padding:4px; border:1px solid #999999;}
 #homecontent ul{margin:0; padding:0; list-style:none;}
-#homecontent p.readmore{font-weight:bold; text-align:right;}
+#homecontent p.readmore{font-weight:bold; text-align:left;}
 
 /* Left Column */
 
 #homecontent .fl_left{display:block; float:left; width:530px;}
 #homecontent .fl_left .column2{display:block; width:530px; }
+#homecontent .fl_left .column2 li{font-size: 13px; padding:15px 0 0 0;}
 #homecontent .fl_left .column2 .left1{display:block; float:left; width:240px; margin:0 25px 30px 0; padding:0; max-height:350px;}
-#homecontent .fl_left .column2 .left1 .left{display:block; float:left; width:240px;padding:0;max-height:300px;overflow: auto;}
-#homecontent .fl_left .column2 .left li{font-size: 13px; padding:15px 0 0 0;}
+#homecontent .fl_left .column2 .left{display:block; float:left; width:240px;padding:0;max-height:300px;overflow: auto;}
 #homecontent .fl_left .column2 .last1{margin-right:0;display:block; float:left; width:240px; margin:0 20px 30px 0; padding:0;max-height:350px;}
 #homecontent .fl_left .column2 .last{margin-right:0;display:block; float:left; width:240px; padding:0;max-height:300px;overflow: auto;}
-#homecontent .fl_left .column2 .last li{font-size: 13px; padding:15px 0 0 0;}
 #homecontent .fl_left p.readmore{display:block; width:240px; padding:5px; text-align:right; line-height:normal; font-weight:bold;}
-
+#homecontent .fl_left .column3{display:block; width:530px;max-height:200px;overflow:auto;}
+#homecontent .fl_left .column3 li{font-size: 13px; padding:15px 0 0 0;}
 /* Right Column */
 
 #homecontent .fl_right{display:block; float:right; width:385px;}
 #homecontent .fl_right li{display:block; width:385px; margin:0 0 10px 0; padding:0 0 8px 0; border-bottom:1px dotted #999999;}
-#homecontent .fl_right img{float:left; width:80px; height:80px; margin:0 10px 0 0;}
-
+#homecontent .fl_right .date{float:left; width:80px; height:80px; margin:0 10px 0 0;text-align:center;}
+#homecontent .fl_right .date .month{background-color:#02ACEE;height:30px;padding-top:7px;}
+#homecontent .fl_right .date .day{padding-top:3px;background-color: #F0FBFF;height:25px;}
 /* ----------------------------------------------Content------------------------------------- */
 
 #content{display:block; float:left; width:600px;}
@@ -145,7 +166,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #footer h2, #footer p, #footer ul, #footer a{margin:0; padding:0; font-weight:normal; list-style:none; line-height:normal;}
 #footer h2{font-size:18px; font-weight:normal; margin-bottom:10px; padding-bottom:8px; border-bottom:1px dotted #999999;}
 #footer li{margin-bottom:5px;}
-#footer .footbox{display:block; float:left; width:180px; margin:0 15px 0 0; padding:0;}
+#footer .footbox{display:block; float:left; width:180px; margin:0 40px 0 0; padding:0;}
 #footer .last{margin:0;}
 
 /* ----------------------------------------------Copyright------------------------------------- */
